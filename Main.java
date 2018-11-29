@@ -29,6 +29,7 @@ public Class Main(){
                                 System,out.println("Ingrese 1 si desea registrar un articulo en la subasta");
                                 System.out.println("Ingrese 2 si desea modificar un articulo ");
                                 System.out.println("Ingrese 3 si desea revisar un articulo ");
+                                System.out.println("Ingrese 4 para salir");
                                 int opcion2=sc.nextInt();
                                 switch(opcion2){
                                     case 1:
@@ -39,11 +40,20 @@ public Class Main(){
                                         break;
                                     case 3:
                                         mostrarArticulos(false);
+                                        break;
+                                    case 4:
+                                        x=false;
+                                        break;
                                 }
                             }
                             else(
                                 System,out.println("Ingrese 1 si desea pujar un articulo en la subasta");
                                 System.out.println("Ingrese 2 si desea revisar un articulo ");
+                                int opcion2=sc.nextInt();
+                                switch(opcion2){
+                                    case 1:
+                                    observador.get(i).pujar();
+                                }
 
                             )
                         }
