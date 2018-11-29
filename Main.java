@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public Class Main(){
     private ArrayList<Observadores> observadores ;
     private ArrayList<Articulo> articulos ;
@@ -49,10 +49,18 @@ public Class Main(){
                             else(
                                 System,out.println("Ingrese 1 si desea pujar un articulo en la subasta");
                                 System.out.println("Ingrese 2 si desea revisar un articulo ");
+                                System.out.println("Ingrese 3 para salir");
                                 int opcion2=sc.nextInt();
                                 switch(opcion2){
                                     case 1:
-                                    observador.get(i).pujar();
+                                        observador.get(i).pujar(observador.get(i));
+                                        break;
+                                    case 2:
+                                        mostrarArticulos(false);
+                                        break;
+                                    case 3:
+                                        x=false;
+                                        break;
                                 }
 
                             )
@@ -61,19 +69,25 @@ public Class Main(){
                     if(aux==0){
                         System.out.println("Nombre y/o identificador incorrectos ");
                     }
+                case 3:
+                    x=false;
+                    break;
             }
         }
 	}
     public void crearCuenta(){
         Observador o;
+        System.out.println("Ingrese su nombre");
         String n=sc.nextLine();
+        System.out.println("Ingrese un numero  identificador");
+        int id=sc.nextInt();
         System.out.println("Ingrese 0 si es vendedor o 1 si es comprador");
-        int x=nextInt();
+        int x=sc.nextInt();
         if(x==0){
-            o=new Observador(n,true);
+            o=new Observador(n,true,id);
         }
         else{
-            o=new Observador(n,false);
+            o=new Observador(n,false,id);
         }
         observadores.add(o);
     }
