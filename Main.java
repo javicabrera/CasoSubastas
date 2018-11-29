@@ -6,6 +6,7 @@ public Class Main(){
 	private Scanner sc = new Scanner(System.in);
 	public static void main ( String[] args ){
         boolean x=true;
+        long startTime = System.nanoTime();
         while(x){
             System.out.println("CASA DE SUBASTAS  ");
 		    System.out.println("Ingrese 1 para crear cuenta ");
@@ -72,6 +73,23 @@ public Class Main(){
                 case 3:
                     x=false;
                     break;
+                long endTime = System.nanoTime();
+                if(endTime-startTime>10000000000){
+                    for(int i=0;i<articulos.size();i++){
+                        if(articulo.get(i).getPujas().size()!=0){
+                            int max=articulo.get(i).getPujas().get(0).monto;
+                            int pos=0;
+                            for(int j=1;j<articulo.get(i).getPujas().size();j++{
+                                if(max<articulo.get(i).getPujas().get(j).monto){
+                                    max=articulo.get(i).getPujas().get(j).monto;
+                                    pos=j;
+                                }
+                            }
+                            articulos.get(i).asignar(articulo.get(i).getPujas().get(pos).o);
+                        }
+                    }
+                    startTime = System.nanoTime();
+                }
             }
         }
 	}
