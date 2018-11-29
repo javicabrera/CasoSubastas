@@ -24,9 +24,8 @@ public Class Main(){
         for(Articulo a: articulos){
             System.out.println(i".- "+a.nombre);
         }
+        System.out.println("Ingrese el numero del articulo que desea revisar");
         int j=sc.nextInt();
-        for(int i=0;i<a.get(j).getPujas().size();i++{
-            System.out.println(a.get(j).getPujas().get(i));
-        }
+        articulos.get(j).mostrarPujas();
     }
 }

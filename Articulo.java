@@ -1,12 +1,13 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 public class Articulo{
-	private Observado persona r;
-	private ArrayList<Integer>  pujas ;
-	private String descripcion ;
-	private String nombre ;
-	private int precio ;
-	private boolean disponible ;
+	public Observado persona r;
+	public ArrayList<Puja>  pujas ;
+	public String descripcion ;
+	public String nombre ;
+	public int precio ;
+	public boolean disponible ;
+	public Scanner sc= new Scaner(System.in);
 
 	public Articulo(Observador v,String d,String n,String p){
 		persona=v;
@@ -20,11 +21,13 @@ public class Articulo{
 
 	public void mostrarPujas(){
 		for(int i=0;i<pujas.size();i++){
-			System.out.println(pujas.get(i));
+			System.out.println(i".- "+pujas.get(i).o.nombre);
+			System.out.println("    "+pujas.get(i).monto);
 		}	
 	}
 	public void modificar(){
-
+		descripcion=sc.nextLine();
+		monto=sc.nextInt();
 	}
 	public void asignar(Observador o){
 		this.persona=o;
