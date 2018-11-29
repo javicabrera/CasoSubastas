@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class Articulo{
-	private persona Observadorr;
-	private pujas ArrayList<Integer>;
-	private descripcion String;
-	private nombre String;
-	private precio int;
-	private disponible boolean;
+	private Observado persona r;
+	private ArrayList<Integer>  pujas ;
+	private String descripcion ;
+	private String nombre ;
+	private int precio ;
+	private boolean disponible ;
 
 	public Articulo(Observador v,String d,String n,String p){
 		persona=v;
