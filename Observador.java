@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Observador(){
-    private nombre String;
-    private vende boolean;
-    private Scanner sc = new Scanner(System.in);
+    public String nombre ;
+    public boolean vende ;
+    public Scanner sc = new Scanner(System.in);
 
     public Observador(String nombre, vende boolean){
         this.nombre=nombre;
@@ -16,5 +16,9 @@ public class Observador(){
         Articulo a=new Articulo(o,d,n,p);
         return a;
     }
-
+    public Puja pujar(Observador o){
+        int m=sc.nextInt();
+        Puja p=new Puja(m,o);
+        return p;
+    }
 }
